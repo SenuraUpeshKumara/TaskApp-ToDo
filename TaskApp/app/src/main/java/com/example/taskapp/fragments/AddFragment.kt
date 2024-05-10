@@ -53,10 +53,10 @@ class AddFragment : Fragment(R.layout.fragment_add),MenuProvider {
             val task = Task(0,taskTitle,taskDesc)
             taskViewModel.addTask(task)
 
-            Toast.makeText(addTask.context,"Task Saved",Toast.LENGTH_SHORT).show()
+            Toast.makeText(addTask.context,"Task Saved",Toast.LENGTH_SHORT).show()      //Toast message after entering a certain record
             view.findNavController().popBackStack(R.id.homeFragment,false)
         }else{
-            Toast.makeText(addTask.context,"Please Enter The Task Title",Toast.LENGTH_SHORT).show()
+            Toast.makeText(addTask.context,"Please Enter The Task Title",Toast.LENGTH_SHORT).show()         //If the task title is not there
         }
     }
 
