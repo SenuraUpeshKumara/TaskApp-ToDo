@@ -10,7 +10,8 @@ import kotlinx.parcelize.Parcelize
 data class Task(
     @PrimaryKey(autoGenerate = true)
     //add
-    val id :Int,
-    val taskTitle:String,
-    val taskDesc:String
+    val id :Int,            //Field 1
+    val taskTitle:String,    //Field 2
+    val taskDesc:String     //Field 3
+    //val taskPriority:Int
 ):Parcelable
