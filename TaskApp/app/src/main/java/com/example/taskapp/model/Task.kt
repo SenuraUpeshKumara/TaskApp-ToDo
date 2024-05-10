@@ -9,7 +9,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Task(
     @PrimaryKey(autoGenerate = true)
-    //add vehh
+    //add
     val id :Int,
     val taskTitle:String,
     val taskDesc:String
