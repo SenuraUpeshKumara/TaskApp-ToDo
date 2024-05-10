@@ -11,6 +11,7 @@ import com.example.taskapp.model.Task
 
 @Dao
 interface TaskDao {
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTask(task: Task)
 
@@ -20,6 +21,7 @@ interface TaskDao {
     @Delete
     suspend fun deleteTask(task: Task)
 
+    //Insertion order as ascending
     @Query("SELECT * FROM TASK ORDER BY id ASC")
     fun getAllTask(): LiveData<List<Task>>
 
