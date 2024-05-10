@@ -1,5 +1,6 @@
 package com.example.taskapp
 
+//Header import files
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         setupViewModel()
     }
 
+    //Function to set ViewModel
     private fun setupViewModel(){
         val taskRepository = TaskRepository(TaskDatabase(this))
         val viewModelProviderFactory = ViewModelFactory(application,taskRepository)
