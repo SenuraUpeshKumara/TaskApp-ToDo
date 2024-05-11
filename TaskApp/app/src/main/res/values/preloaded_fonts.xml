@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="preloaded_fonts" translatable="false">
-        <item>@font/roboto_thin</item>
+    <array name="preloaded_fonts" translatable="false">     //contents cannot be translated  in to other languages in this array "preloaded_fonts"
+        <item>@font/roboto_thin</item>      //This font within the app
     </array>
 </resources>
