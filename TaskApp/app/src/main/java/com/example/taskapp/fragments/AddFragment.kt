@@ -21,30 +21,34 @@ import com.example.taskapp.viewmodel.TaskViewModel
 
 class AddFragment : Fragment(R.layout.fragment_add),MenuProvider {
 
-
+    // View binding variable - addTaskBinding
     private var addTaskBinding: FragmentAddBinding?=null
     private val binding get() = addTaskBinding!!
 
-    private lateinit var taskViewModel: TaskViewModel
-    private lateinit var addTask: View
+    private lateinit var taskViewModel: TaskViewModel       //ViewModel for the tasks
+    private lateinit var addTask: View      //Reference to the current view
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        addTaskBinding = FragmentAddBinding.inflate(inflater,container,false)
+        addTaskBinding = FragmentAddBinding.inflate(inflater,container,false)    //Inflated layout for the fragment
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val menuHost: MenuHost = requireActivity()
-        menuHost.addMenuProvider(this,viewLifecycleOwner, Lifecycle.State.RESUMED)
+        menuHost.addMenuProvider(this,viewLifecycleOwner, Lifecycle.State.RESUMED)      //Initialization of the viewModel
 
-        taskViewModel = (activity as MainActivity).taskViewModel
+        taskViewModel = (activity as MainActivity).taskViewModel        //Assigning the view
         addTask = view
     }
 
+
+    //Saving the task
     private fun saveTask(view: View){
         val taskTitle = binding.addNoteTitle.text.toString().trim()
         val taskDesc = binding.addNoteDesc.text.toString().trim()
@@ -60,11 +64,14 @@ class AddFragment : Fragment(R.layout.fragment_add),MenuProvider {
         }
     }
 
+
+    //Creating the menu
     override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-        menu.clear()
+        menu.clear()            //Clear current items
         menuInflater.inflate(R.menu.menu_add,menu)
     }
 
+    //Save item that is selected
     override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
        return when(menuItem.itemId){
            R.id.saveMenu ->{
