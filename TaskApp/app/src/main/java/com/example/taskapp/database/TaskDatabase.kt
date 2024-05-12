@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.taskapp.model.Task
 
 
+//Room database entities
 @Database(entities = [Task::class], version = 1)
     abstract class TaskDatabase:RoomDatabase() {
      abstract fun getTaskDao():TaskDao

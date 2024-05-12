@@ -1,16 +1,15 @@
 <resources>
-    <string name="app_name">TaskApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">Task Global</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="add_note">Add Note.</string>
-    <string name="enter_the_title">Enter the title</string>
+    <string name="add_note">Add Note</string>
+    <string name="enter_the_title">Enter the task title</string>
     <string name="enter_the_description">Enter the description</string>
     <string name="add_new_task">Add New Task</string>
-    <string name="enter_the_task_titile">enter the task titile</string>
-    <string name="enter_the_task_description">enter the task description</string>
-    <string name="edit_task_details">Edit Task Details..</string>
+    <string name="enter_the_task_titile">Enter the task title</string>
+    <string name="enter_the_task_description">Enter the task description</string>
+    <string name="edit_task_details">Edit Task Details</string>
     <string name="description">Description</string>
     <string name="task_title">Task Title</string>
-    <string name="enter_the_your_task_name">Enter The Your Task Name</string>
-    <string name="enter_small_description_about_your_task">Enter Small Description About Your Task</string>
+    <string name="enter_the_your_task_name">Enter your task name</string>
+    <string name="enter_small_description_about_your_task">Enter your description</string>
 </resources>

@@ -6,6 +6,7 @@ import com.example.taskapp.model.Task
 
 class TaskRepository(private val db : TaskDatabase) {
 
+    //task insertion,updating and deleting activities are done with the relevant DAO file
     suspend fun insertTask(task: Task) =db.getTaskDao().insertTask(task)
     suspend fun deleteTask(task: Task) =db.getTaskDao().deleteTask(task)
     suspend fun updateTask(task: Task) =db.getTaskDao().updateTask(task)
