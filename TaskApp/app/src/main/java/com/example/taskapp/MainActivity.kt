@@ -10,7 +10,7 @@ import com.example.taskapp.viewmodel.TaskViewModel
 import com.example.taskapp.viewmodel.ViewModelFactory
 
 class MainActivity : AppCompatActivity() {
-    lateinit var taskViewModel: TaskViewModel
+    lateinit var taskViewModel: TaskViewModel       //variable declaration for the taskViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
