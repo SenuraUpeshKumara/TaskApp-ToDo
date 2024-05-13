@@ -1,3 +1,5 @@
+//display a list of tasks in a RecyclerView
+
 package com.example.taskapp.adapter
 
 import android.view.LayoutInflater
